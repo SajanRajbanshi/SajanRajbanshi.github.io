@@ -4,6 +4,7 @@ body{
 }
 .top
 {
+    transition:0.5s;
     margin-left: 15px;
     margin-right:15px;
     text-align: center;
