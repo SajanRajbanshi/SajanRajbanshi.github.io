@@ -263,7 +263,6 @@ body{
                         text-decoration: underline;
                     }
                     .overlay{
-                        content: '';
                         top: 0;
                         right: -3%;
                         display: block;
@@ -437,7 +436,6 @@ body{
     margin-top: 2vw;
     position: relative;
     height: 100vh;
-    width: 100vw;
     background-color:var(--bgcolor);
 
     .header{
@@ -454,18 +452,24 @@ body{
 
         .name{
             box-shadow: none;
-            padding: 2px 10px;
             display: flex;
             align-items: center;
             transition: 1s;
             border-radius: 20px;
         }
-
+        .inner_span_name{
+            padding: 2px 10px;
+            transition: 1s;
+            border-radius: 20px;
+        }
+        .inner_span_name:hover{
+            transition: 0.3s;
+            box-shadow: inset var(--hovershadow) 0px 0px 10px;
+        }
         .name:hover
         {
             transition: 0.3s;
-            text-shadow: var(--hovershadow) 0px 0px 20px;
-            box-shadow: var(--hovershadow) 0px 0px 20px;
+            box-shadow: var(--hovershadow) 0px 0px 10px;
         }
 
         .div_linkedin_resume
@@ -477,7 +481,7 @@ body{
 
             .Linkedin{
                 box-shadow: none;
-                padding: 2px 10px;
+                
                 display: flex;
                 align-items: center;
                 transition: 1s;
@@ -485,13 +489,20 @@ body{
             }
             .Linkedin:hover{
                 transition: 0.3s;
-                text-shadow: var(--hovershadow) 0px 0px 20px;
-                box-shadow: var(--hovershadow) 0px 0px 20px;
+                box-shadow: var(--hovershadow) 0px 0px 10px;
+            }
+            .inner_span_linkedin{
+                padding: 2px 10px;
+                border-radius: 20px;
+                transition: 1s;
+            }
+            .inner_span_linkedin:hover{
+                transition: 0.3s;
+                box-shadow: inset var(--hovershadow) 0px 0px 10px;
             }
 
             .Resume{
                 box-shadow: none;
-                padding: 2px 10px;
                 display: flex;
                 align-items: center;
                 transition: 1s;
@@ -500,8 +511,17 @@ body{
             .Resume:hover
             {
                 transition: 0.3s;
-                text-shadow: var(--hovershadow) 0px 0px 20px;
-                box-shadow: var(--hovershadow) 0px 0px 20px;
+                box-shadow: var(--hovershadow) 0px 0px 10px;
+            }
+            .inner_span_resume
+            {
+                transition: 1s;
+                border-radius: 20px;
+                padding: 2px 10px;
+            }
+            .inner_span_resume:hover{
+                transition: 0.3s;
+                box-shadow:inset var(--hovershadow) 0px 0px 10px;
             }
         }
     }
