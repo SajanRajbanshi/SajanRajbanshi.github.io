@@ -3,10 +3,12 @@
 :root{
     --bgcolor: white;
     --fgcolor:black;
+    --fgdim:#8f8f8f;
     --divcolor:rgb(203, 203, 203);
     --radius:2rem;
     --testbg:black;
     --shadow:rgba(21, 233, 63, 0.2);
+    --hovershadow:rgba(0, 0, 0, 0.8);
 }
 a{
     text-decoration: none;
@@ -165,14 +167,14 @@ body{
 
     .hide{
         animation-name: contract;
-        animation-duration: 0.3s;
+        animation-duration: 0.5s;
         animation-timing-function: ease-in;
         animation-fill-mode: forwards;
     }
 
     .show{
         animation-name: expand;
-        animation-duration: 0.3s;
+        animation-duration: 0.5s;
         animation-timing-function: ease-in;
         animation-fill-mode: forwards;
     }
@@ -202,7 +204,6 @@ body{
     }
 }
 
-
 .section_1_root{
     position: sticky;
     top: -20vh;
@@ -220,7 +221,6 @@ body{
         justify-content: space-between;
         width: 100%;
         font-size: 3rem;
-        z-index: 4;
 
         .bio_wrapper
         {
@@ -229,7 +229,6 @@ body{
             font-size: 3rem;
             align-items: center;
             justify-content: center;
-            z-index: 5;
             
             .greeting{
                 font-family:"Dancing Script", cursive;
@@ -272,6 +271,7 @@ body{
                         width: 0%;
                         height: 100%;
                         background-color: var(--bgcolor);
+                        transform: skew(-10deg);
                     }
                     
                     .cover
@@ -363,9 +363,150 @@ body{
     box-shadow:rgba(147, 147, 147, 0.3) 2px 2px 20px;
     border-width: 0.5px;
     border-style: solid;
-    height: 100vh;
+    height: fit-content;
     min-width: 450px;
     max-width: 80%;
     margin: auto;
-    min-height: 100vh;
+
+    .section_2_wrapper
+    {
+        padding:0 2% 5% 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .header
+        {
+
+            .heading
+            {
+                font-family:"Dancing Script", cursive;
+                font-weight: 400;
+                mix-blend-mode:exclusion;
+                color: var(--fgcolor);
+                text-decoration: underline;
+                font-size: 3em;
+            }
+        }
+
+        .text
+        {
+            font-size: 2rem;
+            color: var(--fgcolor);
+            font-family: "Dancing Script",cursive;
+            text-align: center;
+        }
+
+        .image{
+            display: flex;
+            position: relative;
+            justify-content: center;
+            
+            .picture
+            {
+                min-width: 200px;
+                max-width: 15vw;
+                filter: grayscale();
+                transition: 1s;
+            }
+            .picture:hover
+            {
+                transition: .5s;
+                filter: none;
+            }
+            .about{
+                transition: .5s;
+                opacity: 0;
+                text-align: center;
+                position: absolute;
+                top: 100%;
+                line-height: .8rem;
+                background-color: var(--bgcolor);
+                .text{
+                    font-family: "kalam";
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+}
+
+.section_3_root
+{
+    margin-top: 2vw;
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color:var(--bgcolor);
+
+    .header{
+        position: sticky;
+        padding: 2% 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 3%;
+        font-family: "kalam";
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: var(--fgcolor);
+
+        .name{
+            box-shadow: none;
+            padding: 2px 10px;
+            display: flex;
+            align-items: center;
+            transition: 1s;
+            border-radius: 20px;
+        }
+
+        .name:hover
+        {
+            transition: 0.3s;
+            text-shadow: var(--hovershadow) 0px 0px 20px;
+            box-shadow: var(--hovershadow) 0px 0px 20px;
+        }
+
+        .div_linkedin_resume
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 5%;
+
+            .Linkedin{
+                box-shadow: none;
+                padding: 2px 10px;
+                display: flex;
+                align-items: center;
+                transition: 1s;
+                border-radius: 20px;
+            }
+            .Linkedin:hover{
+                transition: 0.3s;
+                text-shadow: var(--hovershadow) 0px 0px 20px;
+                box-shadow: var(--hovershadow) 0px 0px 20px;
+            }
+
+            .Resume{
+                box-shadow: none;
+                padding: 2px 10px;
+                display: flex;
+                align-items: center;
+                transition: 1s;
+                border-radius: 20px;
+            }
+            .Resume:hover
+            {
+                transition: 0.3s;
+                text-shadow: var(--hovershadow) 0px 0px 20px;
+                box-shadow: var(--hovershadow) 0px 0px 20px;
+            }
+        }
+    }
+
+    .container{
+        
+    }
 }

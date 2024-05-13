@@ -40,54 +40,29 @@ window.onload=()=>{
         }
     })
 
-    document.getElementById("section_1_root").addEventListener("mouseenter",(event)=>{
+    setInterval(()=>{
+        if(profession_designer===true)
+    {
+        document.getElementById("overlay").classList.remove("uncover")
+        document.getElementById("overlay").classList.add("cover")
         setTimeout(()=>{
-            if(profession_designer===true)
-        {
-            document.getElementById("overlay").classList.remove("uncover")
-            document.getElementById("overlay").classList.add("cover")
-            setTimeout(()=>{
-                document.getElementById("dynamic_part").innerHTML="Developer"
-                profession_designer=false
-                document.getElementById("overlay").classList.remove("cover")
-                document.getElementById("overlay").classList.add("uncover")
-            },1000)
-        }
-        else{
-            document.getElementById("overlay").classList.remove("uncover")
-            document.getElementById("overlay").classList.add("cover")
-            setTimeout(()=>{
-                document.getElementById("dynamic_part").innerHTML="Designer"
-                profession_designer=true
-                document.getElementById("overlay").classList.remove("cover")
-                document.getElementById("overlay").classList.add("uncover")
-            },1000)
-        }
-        },3000)
+            document.getElementById("dynamic_part").innerHTML="Developer"
+            profession_designer=false
+            document.getElementById("overlay").classList.remove("cover")
+            document.getElementById("overlay").classList.add("uncover")
+        },1000)
+    }
+    else{
+        document.getElementById("overlay").classList.remove("uncover")
+        document.getElementById("overlay").classList.add("cover")
         setTimeout(()=>{
-            if(profession_designer===true)
-        {
-            document.getElementById("overlay").classList.remove("uncover")
-            document.getElementById("overlay").classList.add("cover")
-            setTimeout(()=>{
-                document.getElementById("dynamic_part").innerHTML="Developer"
-                profession_designer=false
-                document.getElementById("overlay").classList.remove("cover")
-                document.getElementById("overlay").classList.add("uncover")
-            },1000)
-        }
-        else{
-            document.getElementById("overlay").classList.remove("uncover")
-            document.getElementById("overlay").classList.add("cover")
-            setTimeout(()=>{
-                document.getElementById("dynamic_part").innerHTML="Designer"
-                profession_designer=true
-                document.getElementById("overlay").classList.remove("cover")
-                document.getElementById("overlay").classList.add("uncover")
-            },1000)
-        }
-        },8000)
-    })
+            document.getElementById("dynamic_part").innerHTML="Designer"
+            profession_designer=true
+            document.getElementById("overlay").classList.remove("cover")
+            document.getElementById("overlay").classList.add("uncover")
+        },1000)
+    }
+    },5000)
 
     let expand=false
     document.getElementById("drop_down_btn").addEventListener("click",(event)=>{
@@ -129,6 +104,7 @@ window.onload=()=>{
             document.querySelector(":root").style.setProperty("--bgcolor","black")
             document.querySelector(":root").style.setProperty("--fgcolor","white")
             document.querySelector(":root").style.setProperty("--shadow","rgba(255, 255, 255, 0.4)")
+            document.querySelector(":root").style.setProperty("--hovershadow","rgba(255, 255, 255, 1)")
             light_theme=false
         }
         else{
@@ -136,9 +112,18 @@ window.onload=()=>{
             document.getElementById("toggle").classList.add("slideLeft")
             document.querySelector(":root").style.setProperty("--bgcolor","white")
             document.querySelector(":root").style.setProperty("--fgcolor","black")
-            document.querySelector(":root").style.setProperty("--shadow","rgba(21, 233, 63, 0.2)")
+            document.querySelector(":root").style.setProperty("--hovershadow","rgba(0, 0, 0, 0.8)")
             light_theme=true
         }
 
+    })
+
+    document.getElementById("picture1").addEventListener("mouseenter",(event)=>
+    {
+        document.getElementById("about_img1").style.opacity=1
+    })
+    document.getElementById("picture1").addEventListener("mouseleave",(event)=>
+    {
+        document.getElementById("about_img1").style.opacity=0
     })
 }
