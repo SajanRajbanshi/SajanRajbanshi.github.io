@@ -95,7 +95,7 @@ window.onload=()=>{
             expand=false
         }
     })
-    let light_theme=true
+    let light_theme=false
     document.getElementById("toggle_button").addEventListener("click",(event)=>{
         if(light_theme)
         {
@@ -126,4 +126,73 @@ window.onload=()=>{
     {
         document.getElementById("about_img1").style.opacity=0
     })
+
+    document.getElementById("project_introduction").addEventListener("mousemove",(event)=>
+    {
+        let x=event.offsetX;
+        let y=event.offsetY;
+        const mouse_follower=document.getElementById("mouse_follower");
+        mouse_follower.style.top=y+"px";
+        mouse_follower.style.left=x+"px";
+        mouse_follower.style.visibility="visible"
+        
+    })
+
+    document.getElementById("project_introduction").addEventListener("mouseleave",(event)=>
+    {
+        document.getElementById("mouse_follower").style.visibility="hidden";
+
+    })
+
+    document.getElementById("project_medigo").addEventListener("mouseenter",(event)=>
+    {
+        console.log("mouse enterd")
+        const intro=document.getElementById("intro")
+        const project_name=document.getElementById("project_name")
+        const picture11=document.getElementById("picture11")
+        const picture2=document.getElementById("picture2")
+        const picture3=document.getElementById("picture3")
+        const picture4=document.getElementById("picture4")
+        project_name.style.top="-30%";
+        intro.style.top="110%"
+        picture11.style.left="50%"
+        picture11.style.top="-5%"
+        picture11.style.rotate="10deg"
+        picture2.style.left="35%"
+        picture2.style.top="5%"
+        picture2.style.rotate="-10deg"
+        picture3.style.left="-20%"
+        picture3.style.top="0px"
+        picture3.style.rotate="5deg"
+        picture4.style.left="-40%"
+        picture4.style.top="0px"
+        picture4.style.rotate="-5deg"
+    })
+
+    document.getElementById("project_medigo").addEventListener("mouseleave",(event)=>
+    {
+        console.log("mouse left")
+        const intro=document.getElementById("intro")
+        const project_name=document.getElementById("project_name")
+        const picture11=document.getElementById("picture11")
+        const picture2=document.getElementById("picture2")
+        const picture3=document.getElementById("picture3")
+        const picture4=document.getElementById("picture4")
+        project_name.style.top="20%";
+        intro.style.top="0%"
+        picture11.style.left="0"
+        picture11.style.top="-5%"
+        picture11.style.rotate="-10deg"
+        picture2.style.left="5%"
+        picture2.style.top="5%"
+        picture2.style.rotate="10deg"
+        picture3.style.left="0px"
+        picture3.style.top="0px"
+        picture3.style.rotate="5deg"
+        picture4.style.left="0px"
+        picture4.style.top="0px"
+        picture4.style.rotate="-5deg"
+    })
+
+
 }
