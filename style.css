@@ -636,7 +636,7 @@ body{
         }
 
         .projects{
-            margin:200px 0 100px 0;
+            margin:20vw 0 10vw 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -681,13 +681,14 @@ body{
                     padding: 2px;
                     position: absolute;
                     text-align: center;
-                    line-height:1vw;
+                    line-height:8px;
                     left: 50%;
                     top: 20%;
                     transform: translateX(-50%);
                     border-radius: 10px 0px 10px 0px;
                     border-color: var(--fgcolor);
                     border-style: solid;
+                    visibility: hidden;
 
                     .intro_span
                     {
@@ -744,8 +745,35 @@ body{
                     transition: 0.3s;
                     rotate: -5deg;
                     z-index: 1;
+                }
+                .blank
+                {
+                    position:absolute;
+                    left: 0%;
+                    top: -30%;
+                    background-color:transparent;
+                    height: 150%;
+                    width: 100%;
 
                 }
+                .visit
+                {
+                    position: absolute;
+                    width: fit-content;
+                    height: fit-content;
+                    border-radius: 20px;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    top: 50%;
+                    padding: 1vw;
+                    color: var(--fgcolor);
+                    border:solid var(--fgcolor);
+                    font-family: "dancing script";
+                    font-size: 2vw;
+                    visibility: hidden;
+                    z-index: 7;
+                }
+
             }
         }
     }

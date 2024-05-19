@@ -153,8 +153,11 @@ window.onload=()=>{
         const picture2=document.getElementById("picture2")
         const picture3=document.getElementById("picture3")
         const picture4=document.getElementById("picture4")
-        project_name.style.top="-30%";
+        const visit=document.getElementById("visit")
+        visit.style.visibility="visible";
+        project_name.style.top="-40%";
         intro.style.top="110%"
+        intro.style.visibility="visible"
         picture11.style.left="50%"
         picture11.style.top="-5%"
         picture11.style.rotate="10deg"
@@ -178,8 +181,11 @@ window.onload=()=>{
         const picture2=document.getElementById("picture2")
         const picture3=document.getElementById("picture3")
         const picture4=document.getElementById("picture4")
+        const visit=document.getElementById("visit")
+        visit.style.visibility="hidden";
         project_name.style.top="20%";
         intro.style.top="0%"
+        intro.style.visibility="hidden"
         picture11.style.left="0"
         picture11.style.top="-5%"
         picture11.style.rotate="-10deg"
