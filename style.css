@@ -282,7 +282,10 @@ body{
                     .dynamic_part
                     {
                         font-family:"Dancing Script", cursive;
-                        text-decoration: underline;
+                        background-image: linear-gradient(90deg,aquamarine,pink);
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
                     }
                     .overlay{
                         top: 0;
@@ -483,7 +486,6 @@ body{
     margin-top: 2vw;
     transition: 0.5s;
     position: relative;
-    height: auto;
     min-width: 412px;
     max-width: 100%;
     padding-bottom: 10vh;
@@ -495,6 +497,7 @@ body{
         display: flex;
         justify-content: space-between;
         min-height: 10%;
+        height: 80px;
         align-items: center;
         top: 3%;
         font-family: "kalam";
