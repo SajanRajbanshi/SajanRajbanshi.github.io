@@ -1,4 +1,10 @@
 window.onload=()=>{
+
+    document.getElementById("bio_content").classList.add("appear")
+    document.getElementById("bio_content").style.visibility="visible"
+    document.getElementById("profile_picture_wrapper").classList.add("appear")
+    document.getElementById("profile_picture_wrapper").style.visibility="visible"
+
     document.getElementById("picture").addEventListener("mouseenter",(event)=>{
         document.getElementById("popup_container").style.visibility="visible"
     })

@@ -224,7 +224,26 @@ body{
 }
 
 
+@keyframes cometoview {
+    from{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to
+    {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+.appear{
+    animation-name: cometoview;
+    animation-duration: 0.5s;
+    animation-delay:0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: backwards;
+    animation-iteration-count: 1;
+}
 
 .section_1_root{
     position: sticky;
@@ -252,6 +271,10 @@ body{
             align-items: center;
             justify-content: center;
             
+            .bio_content{
+                visibility: hidden;
+            }
+
             .greeting{
                 font-family:"Dancing Script", cursive;
             }
@@ -325,6 +348,7 @@ body{
             position: relative;
             align-items: center;
             justify-content: center;
+            visibility: hidden;
 
             .profile_picture{
                 border-style: dashed;
@@ -347,7 +371,7 @@ body{
                 left: 80%;
                 top: 20%;
                 background-image: linear-gradient(90deg,rgb(255,255,255,0.2),rgb(255,255,255,0.1));
-                backdrop-filter: blur(20px);
+                backdrop-filter: blur(40px);
                 border-radius: var(--radius) var(--radius) var(--radius) 0px;
                 border-color: rgb(255,255,255,0.7);
                 box-shadow:rgba(147, 147, 147, 0.3) 2px 2px 30px;
