@@ -105,7 +105,9 @@ a{
         rotate: 0deg;
     }
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     position: relative;;
@@ -505,6 +507,20 @@ body{
     }
 }
 
+@keyframes gradient_text {
+    0%
+    {
+        background-position:left;
+    }
+    50%{
+        background-position:right;
+    }
+    100%
+    {
+        background-position:left;
+    }
+}
+
 .section_3_root
 {
     margin-top: 2vw;
@@ -801,4 +817,84 @@ body{
             }
         }
     }
+
+    .divider{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+
+        .divider_image
+        {
+            width: 90%;
+            filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(142deg) brightness(109%) contrast(101%);
+        }
+    }
+
+    .about_wrapper
+    {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        .about_heading
+        {
+            margin:5vw 0 5vw 0;
+            font-family: "dancing script";
+            font-weight: 800;
+            font-size: 5vw;
+            background-image: linear-gradient(90deg,aquamarine,pink);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .bio_paragraph
+        {
+            margin:0 0 5vw 0;
+            font-family: "kalam";
+            font-size: 3vw;
+            color: var(--fgcolor);
+        }
+    }
+
+
+    .footer
+    {
+        font-family: "dancing script";
+        font-weight: 500;
+
+        .name
+        {
+            font-size: 4vw;
+            background-image: linear-gradient(90deg,aquamarine,pink,aquamarine,pink);
+            background-size: 200%;
+            background-position: left;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation-name: gradient_text;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+
+        .socials
+        {
+            display: flex;
+            padding: 20px;
+            align-items: center;
+            justify-content: space-around;
+            .social
+            {
+                width: 30px;
+                height: 30px;
+                filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(142deg) brightness(109%) contrast(101%);
+            }
+
+        }
+    }
+
 }

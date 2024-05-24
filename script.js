@@ -111,6 +111,8 @@ window.onload=()=>{
             document.querySelector(":root").style.setProperty("--fgcolor","white")
             document.querySelector(":root").style.setProperty("--shadow","rgba(255, 255, 255, 0.4)")
             document.querySelector(":root").style.setProperty("--hovershadow","rgba(255, 255, 255, 1)")
+            document.getElementById("socials").style.filter="brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2151%) hue-rotate(153deg) brightness(115%) contrast(101%)"
+            document.getElementById("divider_image").style.filter="brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2151%) hue-rotate(153deg) brightness(115%) contrast(101%)"
             light_theme=false
         }
         else{
@@ -119,6 +121,8 @@ window.onload=()=>{
             document.querySelector(":root").style.setProperty("--bgcolor","white")
             document.querySelector(":root").style.setProperty("--fgcolor","black")
             document.querySelector(":root").style.setProperty("--hovershadow","rgba(0, 0, 0, 0.8)")
+            document.getElementById("socials").style.filter="brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(7499%) hue-rotate(330deg) brightness(100%) contrast(97%)"
+            document.getElementById("divider_image").style.filter="brightness(0) saturate(100%) invert(0%) sepia(1%) saturate(7499%) hue-rotate(330deg) brightness(100%) contrast(97%)"
             light_theme=true
         }
 
