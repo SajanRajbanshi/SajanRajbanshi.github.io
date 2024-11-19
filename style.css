@@ -131,7 +131,7 @@ body{
     padding: 1% 1% 0 1%;
     height: fit-content;
     border-radius: 0% 0% 2vw 2vw;
-    z-index: 5;
+    z-index: 25;
 
     .drawer_content{
         width: 110px;
@@ -544,7 +544,7 @@ body{
         font-weight: 500;
         font-size: 1.5rem;
         color: var(--fgcolor);
-        z-index: 2;
+        z-index: 20;
 
         .name{
             padding: 10px;
@@ -681,6 +681,138 @@ body{
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            gap: 10vw;
+
+            .project_slack_clone
+            {
+                width: 40vw;
+                height: 25vw;
+                position: relative;
+
+                .picture{
+                    width: 40vw;
+                    aspect-ratio: 16 / 9;
+                    border-radius: 10px;
+                }
+
+                .slack_clone
+                {
+                    position: absolute;
+                    padding: 5px;
+                    transition: 0.3s;
+                    border-radius: 10px 0px 10px 0px;
+                    border-color: var(--fgcolor);
+                    border-style: solid;
+                    left:50%;
+                    top: 20%;
+                    transform: translateX(-50%);
+
+                    .name_span
+                    {
+                        text-align: center;
+                        font-family: "kalam";
+                        color: var(--fgcolor);
+                        font-size: 2vw;
+                    }
+                }
+                .intro 
+                {
+                    transition: 0.3s;
+                    padding: 2px;
+                    position: absolute;
+                    text-align: center;
+                    line-height:8px;
+                    left: 50%;
+                    top: 20%;
+                    transform: translateX(-50%);
+                    border-radius: 10px 0px 10px 0px;
+                    border-color: var(--fgcolor);
+                    border-style: solid;
+                    visibility: hidden;
+
+                    .intro_span
+                    {
+                        font-family: "kalam";
+                        color: var(--fgcolor);
+                        font-size:10px;
+                    }
+                }
+                .slack_picture11
+                {
+                    background-image: url(assets/slack/Screenshot\ 2024-11-19\ at\ 12.24.19.png);
+                    width: 40vw;
+                    background-size: cover;
+                    position: absolute;
+                    left: 0;
+                    top: -5%;
+                    rotate: -10deg;
+                    transition: 0.3s;
+                    z-index: 4;
+                }
+                .slack_picture2
+                {
+                    background-image: url(assets/slack/Screenshot\ 2024-11-19\ at\ 12.23.47.png);
+                    width: 40vw;
+                    background-size: cover;
+                    position: absolute;
+                    left: 5%;
+                    top: 5%;
+                    transition: 0.3s;
+                    rotate: 10deg;
+                    z-index: 3;
+                }
+                .slack_picture3
+                {
+                    background-image: url(assets/slack/Screenshot\ 2024-11-19\ at\ 12.23.27.png);
+                    width: 40vw;
+                    background-size: cover;
+                    position: absolute;
+                    left: 0;
+                    top:0;
+                    transition: 0.3s;
+                    rotate: 5deg;
+                    z-index: 1;
+                }
+                .slack_picture4
+                {
+                    background-image: url(assets/slack/Screenshot\ 2024-11-19\ at\ 12.22.39.png);
+                    width: 40vw;
+                    background-size: cover;
+                    position: absolute;
+                    left: 0;
+                    top:0;
+                    transition: 0.3s;
+                    rotate: -5deg;
+                    z-index: 2;
+                }
+                .blank
+                {
+                    position:absolute;
+                    left: 0%;
+                    top: -30%;
+                    background-color:transparent;
+                    height: 150%;
+                    width: 100%;
+
+                }
+                .visit
+                {
+                    position: absolute;
+                    width: fit-content;
+                    height: fit-content;
+                    border-radius: 20px;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    top: 50%;
+                    padding: 1vw;
+                    color: var(--fgcolor);
+                    border:solid var(--fgcolor);
+                    font-family: "dancing script";
+                    font-size: 2vw;
+                    visibility: hidden;
+                    z-index: 7;
+                }
+            }
 
             .project_medigo
             {
@@ -694,7 +826,7 @@ body{
                     border-radius: 10px;
                 }
 
-                .project_name 
+                .medigo
                 {
                     position: absolute;
                     padding: 5px;

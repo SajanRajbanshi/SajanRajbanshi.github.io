@@ -157,8 +157,8 @@ window.onload=()=>{
     document.getElementById("project_medigo").addEventListener("mouseenter",(event)=>
     {
         console.log("mouse enterd")
-        const intro=document.getElementById("intro")
-        const project_name=document.getElementById("project_name")
+        // const intro=document.getElementById("intro")
+        const project_name=document.getElementById("medigo")
         const picture11=document.getElementById("picture11")
         const picture2=document.getElementById("picture2")
         const picture3=document.getElementById("picture3")
@@ -166,8 +166,8 @@ window.onload=()=>{
         const visit=document.getElementById("visit")
         visit.style.visibility="visible";
         project_name.style.top="-40%";
-        intro.style.top="110%"
-        intro.style.visibility="visible"
+        // intro.style.top="110%"
+        // intro.style.visibility="visible"
         picture11.style.left="50%"
         picture11.style.top="-5%"
         picture11.style.rotate="10deg"
@@ -185,8 +185,8 @@ window.onload=()=>{
     document.getElementById("project_medigo").addEventListener("mouseleave",(event)=>
     {
         console.log("mouse left")
-        const intro=document.getElementById("intro")
-        const project_name=document.getElementById("project_name")
+        // const intro=document.getElementById("intro")
+        const project_name=document.getElementById("medigo")
         const picture11=document.getElementById("picture11")
         const picture2=document.getElementById("picture2")
         const picture3=document.getElementById("picture3")
@@ -194,8 +194,65 @@ window.onload=()=>{
         const visit=document.getElementById("visit")
         visit.style.visibility="hidden";
         project_name.style.top="20%";
-        intro.style.top="0%"
-        intro.style.visibility="hidden"
+        // intro.style.top="0%"
+        // intro.style.visibility="hidden"
+        picture11.style.left="0"
+        picture11.style.top="-5%"
+        picture11.style.rotate="-10deg"
+        picture2.style.left="5%"
+        picture2.style.top="5%"
+        picture2.style.rotate="10deg"
+        picture3.style.left="0px"
+        picture3.style.top="0px"
+        picture3.style.rotate="5deg"
+        picture4.style.left="0px"
+        picture4.style.top="0px"
+        picture4.style.rotate="-5deg"
+    })
+
+
+    document.getElementById("project_slack_clone").addEventListener("mouseenter",(event)=>
+    {
+        console.log("mouse enterd")
+        // const intro=document.getElementById("slack_intro")
+        const project_name=document.getElementById("slack_clone")
+        const picture11=document.getElementById("slack_picture11")
+        const picture2=document.getElementById("slack_picture2")
+        const picture3=document.getElementById("slack_picture3")
+        const picture4=document.getElementById("slack_picture4")
+        const visit=document.getElementById("slack_visit")
+        visit.style.visibility="visible";
+        project_name.style.top="-40%";
+        // intro.style.top="110%"
+        // intro.style.visibility="visible"
+        picture11.style.left="50%"
+        picture11.style.top="-5%"
+        picture11.style.rotate="10deg"
+        picture2.style.left="35%"
+        picture2.style.top="5%"
+        picture2.style.rotate="-10deg"
+        picture3.style.left="-10%"
+        picture3.style.top="-10%"
+        picture3.style.rotate="5deg"
+        picture4.style.left="-40%"
+        picture4.style.top="10%"
+        picture4.style.rotate="5deg"
+    })
+
+    document.getElementById("project_slack_clone").addEventListener("mouseleave",(event)=>
+    {
+        console.log("mouse left")
+        // const intro=document.getElementById("slack_intro")
+        const project_name=document.getElementById("slack_clone")
+        const picture11=document.getElementById("slack_picture11")
+        const picture2=document.getElementById("slack_picture2")
+        const picture3=document.getElementById("slack_picture3")
+        const picture4=document.getElementById("slack_picture4")
+        const visit=document.getElementById("slack_visit")
+        visit.style.visibility="hidden";
+        project_name.style.top="20%";
+        // intro.style.top="0%"
+        // intro.style.visibility="hidden"
         picture11.style.left="0"
         picture11.style.top="-5%"
         picture11.style.rotate="-10deg"
